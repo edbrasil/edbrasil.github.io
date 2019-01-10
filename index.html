@@ -4,7 +4,7 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link rel="icon" href="data:;base64,iVBORwOKGO=" />
   <meta charset="utf-8">
-  <title>Eduardo's Bracket - US Open 2018</title>
+  <title>Eduardo's Bracket - AUS Open 2019</title>
   <meta name="viewport" content="width=device-width">
   <style type="text/css">
 
@@ -83,7 +83,7 @@ h3 {
 <body>
   <div id='container' height = '50' style='margin-left: 25px'>
     <div id='left'>
-      <h3><left>US OPEN 2018 Bracket</left> </h3>
+      <h3><left>AUS OPEN 2019 Bracket</left> </h3>
     </div>
     <div id='center'>
       <div id='cleft'>
@@ -91,16 +91,16 @@ h3 {
       </div>
       <div id='cright'>
         <select id="json_sources" name="json_sources" style='font: 0.8vw Sans-Serif;color: #3b3b3b;'>
-          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/US%20Open%202018/Picks_currank.json" >Naive Model - Higher Rank</option>
-          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/US%20Open%202018/Picks_logreg.json">Logistic Regression</option>
-          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/US%20Open%202018/Picks_neunet.json">Neural Network</option>
-          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/US%20Open%202018/Picks_ranfor.json">Random Forest</option>
-          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/US%20Open%202018/Picks_ebusopen.json" selected>Eduardo's Picks</option>
+          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202019/Picks_currank.json" >Naive Model - Higher Rank</option>
+          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202019/Picks_logreg.json">Logistic Regression</option>
+          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202019/Picks_neunet.json">Neural Network</option>
+          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202019/Picks_ranfor.json">Random Forest</option>
+          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202019/Picks_ebusopen.json" selected>Eduardo's Picks</option>
         </select>​
       </div>
     </div>
     <div id='right'>
-      <img style="float:right" src="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/US%20Open%202018/us_open.png" width="45%"></right>
+      <img style="float:right" src="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202019/aus_open.png" width="25%"></right>
     </div>
     <div style="clear:both;"></div>
   </div>
@@ -129,7 +129,7 @@ h3 {
   // Start drawing left side
 
   var i;
-  var loc = "https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/US%20Open%202018/"
+  var loc = "https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202019/"
 
 var dropdown = d3.select("#json_sources")
 var change = function() {
