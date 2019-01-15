@@ -182,20 +182,20 @@ var change = function() {
         }
         for (i = 0; i < d; i++){
           function correct(j,i){
-              if ((j != 0) && (getRound(j,c_file)[0][0]) != ""){
+              //if ((j != 0) && (getRound(j,c_file)[0][0]) != ""){
               if ((j != 0) && (getRound(j,c_file)[i][0] != "")){
                 if (getRound(j,file)[i][0] == getRound(j,c_file)[i][0]){return "green"} else {return "red"}
                 }
               else {return "#3b3b3b"}
-           }}
+           }//}
 
           function correct_new(j,i, next_elem){
-              if ((j != 0) && (getRound(j,c_file)[0][0]) != ""){
+              //if ((j != 0) && (getRound(j,c_file)[0][0]) != ""){
               if ((j != 0) && (getRound(j,c_file)[i][0] != "")){
                 if (next_elem.innerHTML == getRound(j,c_file)[i][0]){return "green"} else {return "red"}
                 }
               else {return "#3b3b3b"}
-            }}
+            }//}
           var right_pick = correct(j,i)                        
 
           var x = (entry_width + curve_width)*j;
@@ -301,19 +301,19 @@ var change = function() {
         }
         for (i = 0; i < d; i++){
             function correct(j,i){
-              if ((j != 0) && (getRound(j,c_file)[0][0]) != ""){
+              // if ((j != 0) && (getRound(j,c_file)[0][0]) != ""){
               if ((j != 0) && (getRound(j,c_file)[i + 2 **(6-j)][0] != "")){
                 if (getRound(j,file) [i + 2 **(6-j)][0] == getRound(j,c_file) [i + 2 **(6-j)][0]) {return "green"} else {return "red"}
-              }
+               }
               else {return "#3b3b3b"}
-            }}
+            }//}
           function correct_new(j,i, next_elem){
-              if ((j != 0) && (getRound(j,c_file)[0][0]) != ""){
+              // if ((j != 0) && (getRound(j,c_file)[0][0]) != ""){
               if ((j != 0) && (getRound(j,c_file)[i + 2 **(6-j)][0] != "")){
                 if (next_elem.innerHTML == getRound(j,c_file) [i + 2 **(6-j)][0]) {return "green"} else {return "red"}
               }
               else {return "#3b3b3b"}
-            } }             
+            } //}             
           var right_pick = correct(j,i)  
           var x = (entry_width + curve_width)*j;
           var entry_pos = 2*x + entry_width;
