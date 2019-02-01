@@ -11960,7 +11960,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Load JSONs. These were collected for a few hours over a couple of days (1/20 - 1/21).  Season 2 of The Punisher was released on 1/18/2019.</p>
+<p>Load JSONs. These were collected for a few hours over a couple of days (1/23 - 1/30).  Season 2 of The Punisher was released on 1/18/2019.</p>
 
 </div>
 </div>
@@ -11997,7 +11997,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>374 tweets being analyzed.
+<pre>3658 tweets being analyzed.
 </pre>
 </div>
 </div>
@@ -12065,6 +12065,10 @@ Name: text, dtype: object
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proportion of #Punisher tweets:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">punish</span><span class="p">)</span> <span class="o">/</span> <span class="n">ds_tweets</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">netflix</span> <span class="o">=</span> <span class="n">check_word_in_tweet</span><span class="p">(</span><span class="s1">&#39;#Netflix&#39;</span><span class="p">,</span> <span class="n">ds_tweets</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proportion of #Netflix tweets:&quot;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">netflix</span><span class="p">)</span> <span class="o">/</span> <span class="n">ds_tweets</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">netflix</span> <span class="o">=</span> <span class="n">check_word_in_tweet</span><span class="p">(</span><span class="s1">&#39;netflix&#39;</span><span class="p">,</span> <span class="n">ds_tweets</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proportion of &#39;netflix&#39; tweets:&quot;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">netflix</span><span class="p">)</span> <span class="o">/</span> <span class="n">ds_tweets</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">cancel</span> <span class="o">=</span> <span class="n">check_word_in_tweet</span><span class="p">(</span><span class="s1">&#39;cancel&#39;</span><span class="p">,</span> <span class="n">ds_tweets</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proportion of &#39;cancel&#39; tweets:&quot;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">cancel</span><span class="p">)</span> <span class="o">/</span> <span class="n">ds_tweets</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12082,7 +12086,9 @@ Name: text, dtype: object
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Proportion of #Punisher tweets: 1.0
-Proportion of #Netflix tweets: 0.0855614973262032
+Proportion of #Netflix tweets: 0.14598141060688902
+Proportion of &#39;netflix&#39; tweets: 0.2993439037725533
+Proportion of &#39;cancel&#39; tweets: 0.03389830508474576
 </pre>
 </div>
 </div>
@@ -12153,11 +12159,11 @@ Proportion of #Netflix tweets: 0.0855614973262032
     
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Print out the text of 5 positive tweets:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ds_tweets</span><span class="p">[</span><span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;sentiment&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.6</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds_tweets</span><span class="p">[</span><span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;sentiment&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.9</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
 
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Print out the text of 5 negative tweets:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ds_tweets</span><span class="p">[</span><span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;sentiment&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">0.6</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds_tweets</span><span class="p">[</span><span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;sentiment&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">0.9</span><span class="p">][</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
 
 <span class="c1"># Generate average sentiment scores for #python</span>
 <span class="n">sentiment_py</span> <span class="o">=</span> <span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;sentiment&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -12180,19 +12186,19 @@ Proportion of #Netflix tweets: 0.0855614973262032
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Print out the text of 5 positive tweets:
 
-[&#39;I LOVE marvel &amp;amp; DC💕💕💕❤️ #InfinityWar #Marvel #BlackPanther #Thanos #IronMan #Hulk #CaptainAmerica #WinterSoldier… https://t.co/BolXvHdFRU&#39;
- &#39;I LOVE marvel &amp;amp; DC💕💕💕❤️ #InfinityWar #Marvel #BlackPanther #Thanos #IronMan #Hulk #CaptainAmerica #WinterSoldier… https://t.co/HMrYwGQ8LJ&#39;
- &#39;I knew from the very start that Krista likes Billy 😂😂😂 oh Krista i wish u know what Billy did #Punisher&#39;
- &#39;Please help me 💀🖤 spread this \nand save the punisher ⬇️ https://t.co/pfNCPNU8Ce\n\n#thepunisher #punisher #marvel… https://t.co/AIiw0YeLbf&#39;
- &#39;Aww!!! Just getting to start the new season of #Punisher and I was so happy to see your name on it again @KitMoxie !!&#39;]
+[&#39;Just watched ep1 s2 of the very excellent #Punisher with the very excellent @jonnybernthal. The insanely awesome ra… https://t.co/PGTKWX5h2M&#39;
+ &#39;@jonnybernthal @NetflixUK Season 2 of #Punisher is the best season of Marvel TV made yet. Love the final frame, cla… https://t.co/DaN6aYFFZP&#39;
+ &#39;Finally finished #Punisher season 2. Another stellar season. Great story, satisfying ending, &amp;amp; PERFECT CAST. Please… https://t.co/fh8Wr2jsO1&#39;
+ &#39;@jonnybernthal you probably won’t see this but thanks for making #Punisher so great again. You and the writers and… https://t.co/CEyIzR3684&#39;
+ &#39;RT @Hooty117: @Marvel @ThePunisher #SaveDaredevil #Punisher was amazing!! Loved it so much! @jonnybernthal Is such a great actor. I wanna s…&#39;]
 
 Print out the text of 5 negative tweets:
-[&#39;RT @venuspriestess: @benbarnes screams of terror and pain during the last episode of Season 1 of #Punisher were fucking Oscar worthy and so…&#39;
- &#39;So much bloody, Punisher, bum.\n#Punisher #punisherseason2&#39;
- &#39;Watching season two of #Punisher and i gotta say @benbarnes was on fire 👏🏻🔥 i actually felt a little bad for Billy 😂😭&#39;
- &#34;Mahoney needs to stay out of it. He knows Frank&#39;s reputation so how in the hell can he contain both Frank and Billy? 😂😂😂 #Punisher&#34;
- &#39;Krista, the dude just told you he &#34;might&#34; have killed his bestfriend\&#39;s family and you\&#39;re jealous bcos he went to se… https://t.co/qCeIY32qlM&#39;]
-Average sentiment for #Punisher: -0.024285561497326216
+[&#39;IF SEASON THREE OF PUNISHER DOES NOT HAPPEN, I WILL BE SO PISSED. I AM EMOTIONALLY INVESTED!!! @netflix #punisher… https://t.co/NrucCA4AiS&#39;
+ &#39;I CRIED AT THE END BC OF THAT HUG. MY WEAK ASS BITCH HEART #Punisher&#39;
+ &#39;Kin hell, the Punisher dont hold back on the violence and graphic scenes. Frank Castle is an animal #Punisher&#39;
+ &#39;To the tune of Physical, by Olivia Newton-John:\n\nI’m the punisher, punisher\nI’m gonna be punishing, punishing\n\nLet… https://t.co/yxWdXMLbGj&#39;
+ &#39;@jonnybernthal you are BAD ASS MOTHERFUCKER #Punisher&#39;]
+Average sentiment for #Punisher: 0.051358119190814545
 </pre>
 </div>
 </div>
@@ -12205,10 +12211,175 @@ Average sentiment for #Punisher: -0.024285561497326216
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Observation:</strong> The "negative" tweets don't appear negative at all, but rather have to do with the type of content in The Punisher, this needs adjusting.</p>
+<p><strong>Observation:</strong> The "negative" tweets don't appear negative at all, but rather have to do with the type of content in The Punisher.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.-Creating-Time-Series-and-Plotting">4. Creating Time Series and Plotting<a class="anchor-link" href="#4.-Creating-Time-Series-and-Plotting">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Creating time series data frame.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Print created_at to see the original format of datetime in Twitter data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;created_at&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Convert the created_at column to np.datetime object</span>
+<span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;created_at&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;created_at&#39;</span><span class="p">])</span>
+
+<span class="c1"># Print created_at to see new format</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;created_at&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Set the index of ds_tweets to created_at</span>
+<span class="n">ds_tweets</span> <span class="o">=</span> <span class="n">ds_tweets</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;created_at&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0    Wed Jan 23 16:53:45 +0000 2019
+1    Wed Jan 23 16:54:49 +0000 2019
+2    Wed Jan 23 16:56:42 +0000 2019
+3    Wed Jan 23 16:56:43 +0000 2019
+4    Wed Jan 23 16:57:58 +0000 2019
+Name: created_at, dtype: object
+0   2019-01-23 16:53:45
+1   2019-01-23 16:54:49
+2   2019-01-23 16:56:42
+3   2019-01-23 16:56:43
+4   2019-01-23 16:57:58
+Name: created_at, dtype: datetime64[ns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Generating mean frequency</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a punisher column</span>
+<span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;punisher&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">check_word_in_tweet</span><span class="p">(</span><span class="s1">&#39;#Punisher&#39;</span><span class="p">,</span> <span class="n">ds_tweets</span><span class="p">)</span>
+
+<span class="c1"># Create a netflix column</span>
+<span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;netflix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">check_word_in_tweet</span><span class="p">(</span><span class="s1">&#39;netflix&#39;</span><span class="p">,</span> <span class="n">ds_tweets</span><span class="p">)</span>
+
+<span class="c1"># Average of python column by day</span>
+<span class="n">mean_punish</span> <span class="o">=</span> <span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;punisher&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;1 d&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Average of rstats column by day</span>
+<span class="n">mean_netflix</span> <span class="o">=</span> <span class="n">ds_tweets</span><span class="p">[</span><span class="s1">&#39;netflix&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;1 d&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Plotting mean frequency</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot mean python by day(green)/mean rstats by day(blue)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mean_punish</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">day</span><span class="p">,</span> <span class="n">mean_punish</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mean_netflix</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">day</span><span class="p">,</span> <span class="n">mean_netflix</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add labels and show</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Day&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Language mentions over time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="s1">&#39;#Punisher&#39;</span><span class="p">,</span> <span class="s1">&#39;netflix&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.legend.Legend at 0x1804733ea58&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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c/nPf/5TJjEAHHroocyZMweAfv36MXLkSPLz8/n666/Jz89n/vz5jB07lgkTJrBy5Urmzp3LiSeeyM033wxsvBJo2bIlgwcPpqioiPXr13PNNddw6qmnAvDXv/6V5557jh9++IEnn3yS3XbbjRUrVnDhhRcyY8YM1q1bx3XXXcegQYMYO3YsL7zwAqtXr2bFihW8/PLLGfvulBTSdP/9ofO2Cy6A885LOhqpLR06hNHjTjklTC9bBlOmbEwUo0eHvwsIbUzLlpVtqC219dYbD+59+5Y92Jce8Dt0UAdute2WW27hlFNOYdy4cdx2223069ePt956C4AhQ4ak1nvuuefYa6+9qt1eYWEh06ZNo3nz5vTs2ZMLL7yQLl26pJa/+OKLdOzYkRdeeAGAZbE/lnbt2vHBBx/wt7/9jZEjR3L//fdz00030b9/fx544AG+/fZb9t9/f4488kgApkyZwvTp09l+++0z8VWkKCmk4ZVX4Le/DV0933570tFIktq2DT28HntsmF6zJtzV9Oab4bbN0nr88vX36r+pcumc0WfTtGnTyMvLY/bs2fTq1avMsuHDh3PjjTfSvn17xowZU+22jjjiCNpG9+b26tWLBQsWlEkKe+21F8OGDeOyyy7j+OOPp2/fvqllJ510EgD77rsv//znPwGYPHkyEyZMYOTIkUC4lffzzz8H4Kijjsp4QgAlhWp9+in87GehSuHxxxvWoBuy5Zo3D889HHxw0pFITRUWFjJkyBCKiopo164dK1euxN3Jy8tjypQpwMY2hbimTZuyIbqNq/wT2c1jXfw2adKEdeXG7+zRowdTp05l4sSJXHHFFRx99NGMGDGizGfjn3N3nn76aXr27FlmO++++y5bZ2koR913UIWlS8OdRjk54U6jhjj0nkhjlZeXR2FhIT169GDmzJn079+fSZMmUVhYSMsqWulzc3OZOnUqAE899VSN9llcXEyrVq34xS9+wbBhw/jggw+qXP+YY47hr3/9K6XPk02bNq1G+9scOu+txA8/hHrkefPgP/8J/bWISMNSUlLCdtttR05OToXVRxUZNmwYgwcPZty4cfTv379G+5sxYwbDhw8nJyeHZs2acVfpgzKVuOaaaxg6dCh777037k5ubi7PP/98jfZZU3qiuQLuoTH57rvh73+HWHuTiGSAnmjOri15olnVRxW4886Q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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>
