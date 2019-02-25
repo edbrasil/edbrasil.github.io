@@ -10,10 +10,15 @@
   <meta name="viewport" content="width=device-width">
   <style type="text/css">
 
-    body { margin: 60px auto; width: 70%; }
+    body { margin: 60px auto; width: 70%; height:100%;}
+    html,.blurb { height: 100%; }
 
     a { text-decoration: none; color: #999; }
     a:hover { text-decoration: underline; }
+
+    object {display: block;margin-left:auto;margin-right:auto;width:61%;height:95%;}
+
+    .dark {color:#3b3b3b;}
 
     p, ul { font-size: 1.5em; line-height: 1.4em; color: #333; }
 
@@ -31,7 +36,7 @@
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="https://edbrasil.github.io/ao2019">AO 2019</a></li>
+        <li><a href="/ao2019">AO 2019</a></li>
         <li><a href="/uo2018">UO 2018</a></li>
         <li><a href="/netflix">NETFLIX</a></li>
         <li><a href="/resume">Resum&eacute;</a></li>
@@ -40,12 +45,12 @@
   </head>
     <nav>
       <ul style="text-align:center">
-      <li><a href="https://raw.githubusercontent.com/edbrasil/resume/master/EduardoBrasileiroResume.pdf" style="color:#3b3b3b">Modern Resum&eacute;</a></li>
-      <li><a href="https://raw.githubusercontent.com/edbrasil/resume/master/BrasileiroE_Resume.pdf" style="color:#3b3b3b">Formal Resum&eacute;</a></li>
+      <li><a class="dark" href="https://raw.githubusercontent.com/edbrasil/resume/master/EduardoBrasileiroResume.pdf">Modern Resum&eacute;</a></li>
+      <li><a class="dark" href="https://raw.githubusercontent.com/edbrasil/resume/master/BrasileiroE_Resume.pdf">Formal Resum&eacute;</a></li>
     </ul>
     </nav>
     <div class="blurb">
-      <embed src = "https://raw.githubusercontent.com/edbrasil/resume/master/EduardoBrasileiroResume.pdf" width="850vw" height="1200vw" style="display: block;margin-left:auto;margin-right:auto" />
+      <object data = "https://raw.githubusercontent.com/edbrasil/resume/master/EduardoBrasileiroResume.pdf#zoom=FitH" type="application/pdf"></object>
     </div> 
     <footer>
    <ul>
