@@ -28,21 +28,29 @@
     h3 { font-size: 2.3em; }
     h4 { font-size: 1.9em; }
 
-    nav ul, footer ul { font-size: 1em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
+    nav ul, footer ul, #nav_menu { font-size: 1em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
     nav ul li, footer ul li { display: inline; margin-right: 20px; }
 
     footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
   </style>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/uo2018">UO 2018</a></li>    
-        <li><a href="/ao2019">AO 2019</a></li>
-        <li><a href="/fo2019">FO 2019</a></li>
-        <li><a href="/netflix">NETFLIX</a></li>
-        <li><a href="/resume">Resum&eacute;</a></li>
-      </ul>
-    </nav>
+ <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><select id="nav_menu" 
+                style="border:0px;outline:0px;color: #999"
+                onchange="if (this.value) window.location.href=this.value">
+          <option value="" style="color: #999">Grand Slam:</option>
+          <option value="/uo2018" style="color: #3b3b3b">UO 2018</option>
+          <option value="/ao2019" style="color: #3b3b3b">AO 2019</option>
+          <option value="/fo2019" style="color: #3b3b3b">FO 2019</option>
+          <option value="/wi2019" style="color: #3b3b3b">WI 2019</option>
+          <option value="/uo2019" style="color: #3b3b3b">UO 2019</option>
+        </select>
+      </li>    
+      <li><a href="/netflix">NETFLIX</a></li>
+      <li><a href="/resume">Resum&eacute;</a></li>
+    </ul>
+   </nav>
   </head>
     <nav>
       <ul style="text-align:center">
