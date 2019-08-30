@@ -68,7 +68,7 @@ h3 {
         width: 20vw;
          }
   nav ul, footer ul, #nav_menu, #nav_jupyter { font-size: 1em; 
-                                              font-family: 'Helvetica', 'Arial', 'Sans-Serif'; 
+                                              font-family: 'Lato', 'Sans-Serif'; 
                                               padding: 0px; 
                                               list-style: none; 
                                               font-weight: bold; }
