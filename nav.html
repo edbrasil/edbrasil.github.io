@@ -1,6 +1,6 @@
  <nav>
   <ul>
-    <li><a href="/">Home</a></li>
+    <li><a href="/" style="color:#999">Home</a></li>
     <li><select id="nav_menu" 
     	        style="border:0px;outline:0px;color: #999"
     	        onchange="if (this.value) window.location.href=this.value">
@@ -12,8 +12,14 @@
     		<option value="/uo2019" style="color: #3b3b3b">UO 2019</option>
     	</select>
     </li>
-    <li><a href="/swat">SAS SWAT</a></li>    
-    <li><a href="/netflix">NETFLIX</a></li>
-    <li><a href="/resume">Resum&eacute;</a></li>
+    <li><select id="nav_jupyter"
+                style="border:0px;outline:0px;color: #999"
+                onchange="if (this.value) window.location.href=this.value">
+            <option value="" style="color: #999">Jupyter Notebook:</option>
+            <option value="/swat" style="color: #3b3b3b">SAS SWAT</option>
+            <option value="/netflix" style="color: #3b3b3b">NETFLIX</option>
+        </select>
+    </li>    
+    <li><a href="/resume" style="color:#999">Resum&eacute;</a></li>
   </ul>
  </nav>

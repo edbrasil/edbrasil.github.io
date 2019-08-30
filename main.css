@@ -67,7 +67,11 @@ h3 {
         margin-top: 0.4vw;
         width: 20vw;
          }
-  nav ul, footer ul, #nav_menu { font-size: 1em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
+  nav ul, footer ul, #nav_menu, #nav_jupyter { font-size: 1em; 
+                                              font-family: 'Helvetica', 'Arial', 'Sans-Serif'; 
+                                              padding: 0px; 
+                                              list-style: none; 
+                                              font-weight: bold; }
   nav ul li, footer ul li { display: inline; margin-right: 20px; }
 
   ul { font-size: 1.5em; line-height: 1.4em; color: #333; }
