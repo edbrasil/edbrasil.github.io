@@ -33,24 +33,15 @@
 
     footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
   </style>
- <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><select id="nav_menu" 
-                style="border:0px;outline:0px;color: #999"
-                onchange="if (this.value) window.location.href=this.value">
-          <option value="" style="color: #999">Grand Slam:</option>
-          <option value="/uo2018" style="color: #3b3b3b">UO 2018</option>
-          <option value="/ao2019" style="color: #3b3b3b">AO 2019</option>
-          <option value="/fo2019" style="color: #3b3b3b">FO 2019</option>
-          <option value="/wi2019" style="color: #3b3b3b">WI 2019</option>
-          <option value="/uo2019" style="color: #3b3b3b">UO 2019</option>
-        </select>
-      </li>    
-      <li><a href="/netflix">NETFLIX</a></li>
-      <li><a href="/resume">Resum&eacute;</a></li>
-    </ul>
-   </nav>
+
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.js">
+  </script>
+  <script>
+    $(function(){$("#nav").load("https://raw.githubusercontent.com/edbrasil/edbrasil.github.io/master/nav.html")})
+  </script>
+  <div id="nav"></div>
+  
   </head>
     <nav>
       <ul style="text-align:center">
