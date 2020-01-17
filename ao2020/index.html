@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
+  <link href="https://edbrasil.github.io/main.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="https://edbrasil.github.io/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://edbrasil.github.io/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <title>Eduardo Brasileiro | AUS Open 2020</title>
+  <meta name="viewport" content="width=device-width">
+
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.js">
+  </script>
+  <script>
+    $(function(){$("#nav").load("https://raw.githubusercontent.com/edbrasil/edbrasil.github.io/master/nav.html")})
+  </script>
+  <div id="nav"></div>
+
+</head>
+<body>
+
+  <div id='container' height = '50' style='margin-left: 25px'>
+    <div id='left'>
+      <h3><left>AUS OPEN 2019 Bracket</left> </h3>
+    </div>
+    <div id='center'>
+      <div id='cleft'>
+        <h2>Select Model:</h2>
+      </div>
+      <div id='cright'>
+        <select id="json_sources" name="json_sources" style='font: 0.8vw Sans-Serif;color: #3b3b3b;'>
+          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202020/Picks_currank.json" >Naive Model - Higher Rank</option>
+          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202020/Picks_logreg.json">Logistic Regression</option>
+          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202020/Picks_neunet.json">Neural Network</option>
+          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202020/Picks_ranfor.json">Random Forest</option>
+          <option value ="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202020/Picks_ebusopen.json" selected>Eduardo's Picks</option>
+        </select>​
+      </div>
+    </div>
+    <div id='right'>
+      <img style="float:right" src="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202020/aus_open.png" width="25%"></right>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <div id="brack_div"></div>
+  <div id="win_div"></div>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script type="text/javascript" id="mainjs" src="https://edbrasil.github.io/main.js" 
+          loc="https://raw.githubusercontent.com/edbrasil/tennis_machine_learning/master/AUS%20Open%202020/">       
+  </script>
+
+<footer>
+   <ul>
+   <li><a href="mailto:epbrasil717@gmail.com">email</a></li>
+   <li><a href="https://www.linkedin.com/in/eduardobrasileiro/">linkedin</a></li>
+   <li><a href="https://github.com/edbrasil">github.com/edbrasil</a></li>
+   </ul>
+</footer>
+</body>
